@@ -2,7 +2,8 @@ version: 2.1
 
 orbs:
   # Replace this with your own!
-  circleci-poc-orb-file-copy: brasstack/circleci-poc-orb-file-copy@<<pipeline.parameters.dev-orb-version>>
+  # this wont exist until after the first push. - dsr
+  # circleci-poc-orb-file-copy: brasstack/circleci-poc-orb-file-copy@<<pipeline.parameters.dev-orb-version>>
   orb-tools: circleci/orb-tools@10.0
   bats: circleci/bats@1.0
   shellcheck: circleci/shellcheck@2.0
@@ -32,7 +33,8 @@ jobs:
       # "greet" is a sample command packaged with this orb config.
       # This sample integration test will run as long as the greet command exists. Once you remove the greet command you should remove this line.
       # Push new changes first, before adding new tests to your config.
-      - circleci-poc-orb-file-copy/greet
+      # this wont exist until after the first push. - dsr
+      # - circleci-poc-orb-file-copy/greet
 
 workflows:
   # Prior to producing a development orb (which requires credentials) basic validation, linting, and even unit testing can be performed.
