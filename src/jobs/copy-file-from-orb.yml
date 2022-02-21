@@ -1,0 +1,19 @@
+description: >
+  proof of concept example -
+  copies a file from the orb to the filesystem of a running job
+
+executor: default
+
+steps:
+  - run:
+      name: "copy sample.yml from orb to the filesystem"
+      environment:
+          TEMPLATE_CONTENT: <<include(templates/sample.yml)>>
+      command: /bin/echo "$TEMPLATE_CONTENT" > /tmp/sample.yml
+
+  - run:
+      name: "file we copied to /tmp/sample.yml"
+      command: cat  /tmp/sample.yml
+
+
+
