@@ -7,6 +7,8 @@ executor: default
 steps:
   - run:
       name: "copy sample.yml from orb to the filesystem"
+      ## I haven't found a way to take the source as a parameter.
+      ## you can't expand a parameter inside the include
       environment:
           TEMPLATE_CONTENT: <<include(templates/sample.yml)>>
       command: /bin/echo "$TEMPLATE_CONTENT" > /tmp/sample.yml
