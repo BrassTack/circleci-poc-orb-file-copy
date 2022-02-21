@@ -10,7 +10,8 @@ steps:
       ## I haven't found a way to take the source as a parameter.
       ## you can't expand a parameter inside the include
       environment:
-          TEMPLATE_CONTENT: <<include(templates/sample.yml)>>
+          # TEMPLATE_CONTENT: <<include(templates/sample.yml)>>
+          TEMPLATE_CONTENT: <<include(../README.md)>>
       command: /bin/echo "$TEMPLATE_CONTENT" > /tmp/sample.yml
 
   - run:
