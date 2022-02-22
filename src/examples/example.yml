@@ -1,13 +1,12 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  Simple job to copy a file.
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    circleci-poc-orb-file-copy: brasstack/circleci-poc-orb-file-copy@0
   workflows:
-    use-my-orb:
+    file-copy-test:
       jobs:
-        - <orb-name>/<job-name>
+        - circleci-poc-orb-file-copy/copy-file-from-orb
+
+
