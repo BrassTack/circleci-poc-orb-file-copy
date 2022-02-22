@@ -4,9 +4,9 @@
 
 # Example orb file copy
 
-Copies a "file" from inside the orb to the filesystem of the running job.
+Example implementation - it copies a "file" from inside the orb to the filesystem of the running job.  This example cannot be reusably consumed.
 
-See --brasstack link to article-- for a more complete explanation.
+See https://www.brasstack.net/blog/circleci-orb-file-copy/ for a more complete explanation.
 
 Example usage: https://github.com/BrassTack/circleci-poc-orb-file-copy-consumer/tree/main/.circleci
 
